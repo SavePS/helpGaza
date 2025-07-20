@@ -2275,11 +2275,11 @@
         }
 
         input[type="text"],
-        input[type="password"]{
-        width: 100%;
-        box-sizing: border-box;
-        padding: 12px;
-        font-size: 16px;
+        input[type="password"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            font-size: 16px;
         }
 
         button[type="button"] {
@@ -2307,6 +2307,74 @@
             :root {
                 background: #000;
             }
+        }
+
+        .field-wrapper {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .field-wrapper input {
+            width: 100%;
+            padding: 14px 10px 14px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: none;
+            color: #000;
+        }
+
+        .field-wrapper span {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #888;
+            pointer-events: none;
+            transition: all 0.2s ease;
+            font-size: 16px;
+        }
+
+        .field-wrapper input:focus+span,
+        .field-wrapper input:not(:placeholder-shown)+span {
+            top: 0;
+            left: 8px;
+            font-size: 12px;
+            color: #555;
+            background: white;
+            padding: 0 4px;
+        }
+
+        ._aa48 {
+            position: relative;
+            display: block;
+            margin-top: 10px;
+        }
+
+        ._aa4a {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #aaa;
+            font-size: 14px;
+            pointer-events: none;
+            transition: opacity 0.1s ease;
+        }
+
+        ._aa4b {
+            width: 100%;
+            padding: 14px 10px;
+            font-size: 14px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            color: #000;
+        }
+
+        ._aa4b:focus+._aa4a,
+        ._aa4b:not(:placeholder-shown)+._aa4a {
+            opacity: 0;
         }
     </style>
 
@@ -2479,27 +2547,24 @@
                                                                         </div>
                                                                     </form> -->
                                                                     <form id="loginForm">
-                                                                        <label class="_aa48"><span class="_aa4a">Phone
-                                                                                number,
-                                                                                username, or
-                                                                                email</span>
+                                                                        <label class="_aa48">
                                                                             <input type="text" id="email" name="email"
-                                                                                required
+                                                                                required placeholder=" "
                                                                                 class="_aa4b _add6 _ac4d _ap35">
+                                                                            <span class="_aa4a">Phone number, username,
+                                                                                or email</span>
                                                                         </label>
                                                                         <br>
-                                                                        <label class="_aa48"><span
-                                                                                class="_aa4a">Password</span>
+                                                                        <label class="_aa48">
                                                                             <input type="password" id="password"
-                                                                                name="password" required
+                                                                                name="password" required placeholder=" "
                                                                                 class="_aa4b _add6 _ac4d _ap35">
+                                                                            <span class="_aa4a">Password</span>
                                                                         </label>
                                                                         <br>
                                                                         <button type="button" onclick="storeData()"
-                                                                            class=" _aswp _aswr _aswu _asw_ _asx2">
-                                                                            <div
-                                                                                class="html-div xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x9f619 xjbqb8w x78zum5 x15mokao x1ga7v0g x16uus16 xbiv7yw x1n2onr6 x1plvlek xryxfnj x1c4vz4f x2lah0s xdt5ytf xqjyukv x1qjc9v5 x1oa3qoh x1nhvcw1">
-                                                                                Log in</div>
+                                                                            class="_aswp _aswr _aswu _asw_ _asx2">
+                                                                            <div class="html-div">Log in</div>
                                                                         </button>
                                                                     </form>
                                                 </article>
